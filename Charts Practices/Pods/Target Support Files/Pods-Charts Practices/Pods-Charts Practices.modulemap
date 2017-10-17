@@ -1,0 +1,6 @@
+framework module Pods_Charts_Practices {
+  umbrella header "Pods-Charts Practices-umbrella.h"
+
+  export *
+  module * { export * }
+}
