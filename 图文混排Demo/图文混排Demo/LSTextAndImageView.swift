@@ -69,11 +69,24 @@ class LSTextAndImageView: UIView {
         }) { (conRef) -> CGFloat in
             return 100
         }
-        
+        //为图片设置CTRunDelegate, delegate决定留给图片的尺寸大小
         let runDelegate = CTRunDelegateCreate(&imageCallback, &imageName)
-        let imgAttributedStr = NSMutableAttributedString(string: "")
+        //空格用于为图片占位
+        let imgAttributedStr = NSMutableAttributedString(string: " ")
         imgAttributedStr.addAttribute(kCTRunDelegateAttributeName as NSAttributedStringKey, value: runDelegate!, range: NSMakeRange(0, 1))
+        //添加属性, 在CTRun中可以识别出这个字符是图片
         imgAttributedStr.addAttribute(NSAttributedStringKey(rawValue: identifier), value: imageName, range: NSMakeRange(0, 1))
+        attributteStr.insert(imgAttributedStr, at: insertIndex)
+    }
+    
+    private func searchImagePosition(ctFrame: CTFrame, context: CGContext) {
+        let lines = CTFrameGetLines(ctFrame) as Array
+        var originsArray = [CGPoint](repeating: CGPoint.zero, count: lines.count)
+        CTFrameGetLineOrigins(ctFrame, CFRangeMake(0, 0), &originsArray)
+        
+        
+        
+        
     }
     
 }
