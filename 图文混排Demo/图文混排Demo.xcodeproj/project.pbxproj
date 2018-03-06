@@ -15,6 +15,12 @@
 		9050A047204A4DAE00D92932 /* ____DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050A046204A4DAE00D92932 /* ____DemoTests.swift */; };
 		9050A052204A4DAE00D92932 /* ____DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050A051204A4DAE00D92932 /* ____DemoUITests.swift */; };
 		9050A060204A4DDD00D92932 /* LSTextAndImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050A05F204A4DDD00D92932 /* LSTextAndImageView.swift */; };
+		90A6D88C204B9426002F6DD3 /* CTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A6D88B204B9426002F6DD3 /* CTView.swift */; };
+		90A6D892204B9559002F6DD3 /* zombies.txt in Resources */ = {isa = PBXBuildFile; fileRef = 90A6D88E204B9559002F6DD3 /* zombies.txt */; };
+		90A6D893204B9559002F6DD3 /* zombie1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90A6D88F204B9559002F6DD3 /* zombie1.jpg */; };
+		90A6D894204B9559002F6DD3 /* zombie2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90A6D890204B9559002F6DD3 /* zombie2.jpg */; };
+		90A6D895204B9559002F6DD3 /* zombie3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 90A6D891204B9559002F6DD3 /* zombie3.jpg */; };
+		90A6D897204B95A8002F6DD3 /* MarkupParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A6D896204B95A8002F6DD3 /* MarkupParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		9050A051204A4DAE00D92932 /* ____DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____DemoUITests.swift"; sourceTree = "<group>"; };
 		9050A053204A4DAE00D92932 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9050A05F204A4DDD00D92932 /* LSTextAndImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSTextAndImageView.swift; sourceTree = "<group>"; };
+		90A6D88B204B9426002F6DD3 /* CTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTView.swift; sourceTree = "<group>"; };
+		90A6D88E204B9559002F6DD3 /* zombies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = zombies.txt; sourceTree = "<group>"; };
+		90A6D88F204B9559002F6DD3 /* zombie1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zombie1.jpg; sourceTree = "<group>"; };
+		90A6D890204B9559002F6DD3 /* zombie2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zombie2.jpg; sourceTree = "<group>"; };
+		90A6D891204B9559002F6DD3 /* zombie3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zombie3.jpg; sourceTree = "<group>"; };
+		90A6D896204B95A8002F6DD3 /* MarkupParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkupParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,11 @@
 		9050A030204A4DAE00D92932 /* 图文混排Demo */ = {
 			isa = PBXGroup;
 			children = (
+				90A6D88D204B9559002F6DD3 /* zombieMagMaterials */,
 				9050A031204A4DAE00D92932 /* AppDelegate.swift */,
 				9050A05F204A4DDD00D92932 /* LSTextAndImageView.swift */,
+				90A6D88B204B9426002F6DD3 /* CTView.swift */,
+				90A6D896204B95A8002F6DD3 /* MarkupParser.swift */,
 				9050A033204A4DAE00D92932 /* ViewController.swift */,
 				9050A035204A4DAE00D92932 /* Main.storyboard */,
 				9050A038204A4DAE00D92932 /* Assets.xcassets */,
@@ -126,6 +141,17 @@
 				9050A053204A4DAE00D92932 /* Info.plist */,
 			);
 			path = "图文混排DemoUITests";
+			sourceTree = "<group>";
+		};
+		90A6D88D204B9559002F6DD3 /* zombieMagMaterials */ = {
+			isa = PBXGroup;
+			children = (
+				90A6D88E204B9559002F6DD3 /* zombies.txt */,
+				90A6D88F204B9559002F6DD3 /* zombie1.jpg */,
+				90A6D890204B9559002F6DD3 /* zombie2.jpg */,
+				90A6D891204B9559002F6DD3 /* zombie3.jpg */,
+			);
+			path = zombieMagMaterials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +263,11 @@
 			files = (
 				9050A03C204A4DAE00D92932 /* LaunchScreen.storyboard in Resources */,
 				9050A039204A4DAE00D92932 /* Assets.xcassets in Resources */,
+				90A6D892204B9559002F6DD3 /* zombies.txt in Resources */,
 				9050A037204A4DAE00D92932 /* Main.storyboard in Resources */,
+				90A6D894204B9559002F6DD3 /* zombie2.jpg in Resources */,
+				90A6D893204B9559002F6DD3 /* zombie1.jpg in Resources */,
+				90A6D895204B9559002F6DD3 /* zombie3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9050A034204A4DAE00D92932 /* ViewController.swift in Sources */,
+				90A6D897204B95A8002F6DD3 /* MarkupParser.swift in Sources */,
+				90A6D88C204B9426002F6DD3 /* CTView.swift in Sources */,
 				9050A060204A4DDD00D92932 /* LSTextAndImageView.swift in Sources */,
 				9050A032204A4DAE00D92932 /* AppDelegate.swift in Sources */,
 			);

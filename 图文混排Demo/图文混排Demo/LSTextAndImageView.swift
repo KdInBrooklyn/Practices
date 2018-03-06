@@ -82,8 +82,33 @@ class LSTextAndImageView: UIView {
     private func searchImagePosition(ctFrame: CTFrame, context: CGContext) {
         let lines = CTFrameGetLines(ctFrame) as Array
         var originsArray = [CGPoint](repeating: CGPoint.zero, count: lines.count)
+        //将frame里的每一行的初始坐标写到数组里面
         CTFrameGetLineOrigins(ctFrame, CFRangeMake(0, 0), &originsArray)
-        
+        for i in 0..<lines.count {
+            let line = lines[i]
+            var lineAscent = CGFloat()
+            var lineDscent = CGFloat()
+            var lineLeading = CGFloat()
+            
+            CTLineGetTypographicBounds(line as! CTLine, &lineAscent, &lineDscent, &lineLeading)
+            
+            //获取每行的CTRun个数
+            let runs = CTLineGetGlyphRuns(line as! CTLine) as NSArray
+            //遍历CTRun找出图片所在的CTRun并进行绘制, 每行可能有多个CTRun
+            for j in 0..<runs.count {
+                var runAscent = CGFloat()
+                var runDescent = CGFloat()
+                
+                //获取该行的初始坐标
+                var lineOrigin = originsArray[i]
+                //获取当前的CTRun
+                let run = runs[j]
+                let attributes = CTRunGetAttributes(run as! CTRun) as NSDictionary
+                //获取CTRun的宽度
+                let width = CGFloat(CTRunGetTypographicBounds(run as! CTRun, CFRangeMake(0, 0), &runAscent, &runDescent, nil))
+                
+            }
+        }
         
         
         
